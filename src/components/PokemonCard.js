@@ -9,12 +9,12 @@ export default function PokemonCard({
   isFavorite,
 }) {
   return (
-    <div className="relative z-30 pokemon-card w-full md:w-[233px] mx-auto bg-white rounded-[10px] p-[14px] relative">
+    <div className="relative z-30 pokemon-card w-[80%] md:w-[233px] mx-auto bg-white rounded-[10px] p-[14px] relative">
       <Link to={`/detail/${id}`}>
         <div className="rounded-[10px] bg-[#F2F2F2] p-[17px] text-center h-[150px] md:h-[200px] flex items-center justify-center">
           <img
             src={`https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/${id}.svg`}
-            className="w-[100%] md:w-[80%]"
+            className="w-[80%] max-w-[117px] md:w-[80%]"
             alt=""
           />
         </div>

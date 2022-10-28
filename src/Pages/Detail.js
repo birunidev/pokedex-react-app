@@ -29,20 +29,20 @@ export default function Detail() {
   return (
     <Layout>
       {isLoading && (
-        <div className="relative flex items-center justify-center h-[80vh]">
+        <div className="relative md:flex items-center justify-center h-[80vh]">
           <Loading />
         </div>
       )}
       {!isLoading && (
         <div>
           <p className="text-[42px] font-bold mb-10 mt-10">{pokemon.name}</p>
-          <div className="grid grid-cols-2">
+          <div className="md:grid grid-cols-2">
             <div>
               <div className="max-w-[345px]">
                 <img
                   src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokemon.id}.svg`}
                   alt=""
-                  className="w-full"
+                  className="w-[80%] mb-3 md:w-full"
                 />
               </div>
             </div>

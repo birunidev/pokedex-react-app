@@ -96,7 +96,7 @@ export default function Home() {
             </div>
           }
         >
-          <div class="pokemon-cards mt-[32px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-[20px] mb-10">
+          <div class="pokemon-cards mt-[32px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-4 3xl:grid-cols-5 gap-[20px] mb-10">
             {pokemons.map((pokemon, index) => {
               return (
                 <PokemonCard
