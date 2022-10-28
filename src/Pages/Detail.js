@@ -16,6 +16,14 @@ export default function Detail() {
       setPokemon(res.data);
       setIsLoading(false);
     });
+    const pokemonStats = document.querySelectorAll(".pokemon-stat");
+
+    pokemonStats.forEach((item) => {
+      setTimeout(() => {
+        item.style.width = item.getAttribute("data-width");
+      }, 100);
+      console.log(item.getAttribute("data-width"));
+    });
   });
 
   return (
@@ -53,7 +61,10 @@ export default function Detail() {
                     <div className="flex items-center">
                       <p className="text-xl mr-4">{stat.base_stat}</p>
                       <div className="bar rounded-full bg-[#D1D1D1] w-full h-[10px]">
-                        <span className="bar-inner block h-full rounded-full bg-[#777777] pokemon-stat"></span>
+                        <span
+                          data-width={`${stat.base_stat}%`}
+                          className="bar-inner block h-full rounded-full bg-[#777777] pokemon-stat"
+                        ></span>
                       </div>
                     </div>
                   </div>
