@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+// import "./App.css";
+// import Home from "./Pages/Home";
+// import Favorite from "./Pages/Favorite";
+// import Detail from "./Pages/Detail";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+// function App() {
+//   return (
+//     <Router>
+//       <Switch>
+//         <div className="App">
 
-export default App;
+//           <div class="max-w-[80%] mx-auto mt-5">
+//             <Route exact path="/" component={Home} />
+//             <Route path="/detail/:id" component={Detail} />
+//             <Route path="/favorites" component={Favorite} />
+//           </div>
+//         </div>
+//       </Switch>
+//     </Router>
+//   );
+// }
+
+// export default App;

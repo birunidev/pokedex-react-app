@@ -1,13 +1,36 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
+import Home from "./Pages/Home";
+import Detail from "./Pages/Detail";
+import Favorite from "./Pages/Favorite";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />,
+  },
+  {
+    path: "/detail/:id",
+    element: <Detail />,
+  },
+  {
+    path: "/favorites",
+    element: <Favorite />,
+  },
+]);
+
+const favorites = localStorage.getItem("favorites");
+if (!favorites) {
+  localStorage.setItem("favorites", JSON.stringify([]));
+}
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
