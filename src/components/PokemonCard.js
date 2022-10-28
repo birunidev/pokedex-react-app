@@ -39,7 +39,7 @@ export default function PokemonCard({
           return (
             <span
               key={index}
-              className={`bg-types-${type.type.name} px-3 py-1 text-sm md:text-normal inline-block rounded-lg mr-1 mb-2 capitalize`}
+              className={`bg-gray-200 bg-types-${type.type.name} px-3 py-1 text-sm md:text-normal inline-block rounded-lg mr-1 mb-2 capitalize`}
             >
               {type.type.name}
             </span>
