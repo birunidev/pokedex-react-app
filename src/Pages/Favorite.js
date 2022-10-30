@@ -7,7 +7,13 @@ export default function Favorite() {
     JSON.parse(localStorage.getItem("favorites"))
   );
 
-  function handleFavorite() {}
+  function handleFavorite(e, id) {
+    let filtered = JSON.parse(localStorage.getItem("favorites")).filter(
+      (item) => item.id != id
+    );
+    setFavorites(filtered);
+    localStorage.setItem("favorites", JSON.stringify(filtered));
+  }
   return (
     <Layout>
       {favorites.length === 0 && (
@@ -22,7 +28,7 @@ export default function Favorite() {
           </p>
         </div>
       )}
-      <div className="pokemon-cards mt-[32px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-[20px] mb-10">
+      <div className="pokemon-cards mt-[32px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-4 gap-[20px] mb-10">
         {favorites.length > 0 &&
           favorites.map((pokemon, index) => {
             return (
